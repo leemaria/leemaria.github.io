@@ -208,3 +208,13 @@ cursor: crosshair; }
 .tab{
   margin-left: 40px;
 }
+
+table { 
+	font-family: arial; 
+	color: #000000; 
+	font-size: 12px;
+	width=75%
+}
+
+  td.colA { width: 50%; }
+  td.colB { width: 25%; }
