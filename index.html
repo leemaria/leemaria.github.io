@@ -1,29 +1,325 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+<head> 
+<title>Maria Lee's Design Portfolio</title>
+<script type="text/javascript">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  	<title>jQuery PageSlide 1.1 Demo</title>
-  	<link rel="stylesheet" href="demo.css" type="text/css" media="screen" title="no title" charset="utf-8">
-  	<!-- Files used by jQuery pageSlide plugin -->
-<script type="text/javascript" src="http://www-personal.umich.edu/~leemaria/jQuery/jquery.pageslide.js"></script>
-<script type="text/javascript" src="http://www-personal.umich.edu/~leemaria/jQuery/lib/jquery-1.3.2.min.js"></script>
-  </head>
-  <body>
-      <div id="content">
-        <div id="header">
-          <p>Welcome to the jQuery PageSlide Demo, below are some various interactions for you to play with.</p>
-          <p>To close the slide, click anywhere on the screen. Only one slide can be open at a time.</p>
-        </div>
-        <ul>
-          <li><a href="test.html" id="slide-right">PageSlide from the left</a></li>
-          <li><a href="_right.html" id="slide-right">PageSlide from the right</a></li>
-          <li><a href="_modal.html" id="slide-modal">PageSlide as a modal element</a></li>
-        </ul>
-      </div>
-  </body>
-<script>
-    $("a.first").pageslide();
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37638119-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+	
+	$(".toggle_container").hide();
+ 
+	$("h2.trigger").click(function(){
+		$(this).toggleClass("active").next().slideToggle("slow");
+	});
+ 
+});
+</script> 
+
+<script src="/jquery/jquery.min.js"></script> 
+<script src="/jquery/jquery.pageslide-0.2.js"></script> 
+
+<script type="text/javascript"> 
+$(document).ready(function() {
+  $('a.help').pageSlide({
+      width: "400px",
+      duration: "fast",
+	  direction: "right"
+  });
+  $('a.help-long').pageSlide({
+      width: "600px"
+  });
+  $('a.help-full').pageSlide({
+      width: "100%",
+      duration: 1000
+  });
+});
+</script>
+ 
+<link href="style.css" rel="stylesheet" type="text/css" /> 
+
+</head> 
+ 
+<body>
+<p>To see full portfolio click <!--<a href="portfolio.html">here</a>, or see a --><a href="#examples">here</a></p>
+<p></p>
+<h3>&nbsp;Maria Lee</h3>
+<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+<tr>
+<td class="colA">
+<p><b>Local Address</b></p>
+<p>1001 E. University Ave. Apt #6B<br>
+Ann Arbor, MI 48104<br>
+(517) 610-8058<br>
+leemaria@umich.edu
+</p>
+</td>
+<td valign="top" class="colB">
+<p><b>Permanent Address</b></p>
+<p>126 N. Broad St.<br>
+Hillsdale, MI 49242<br>
+(517) 439-1924
+</p>
+</td>
+</tr>
+</table>
+
+<!--- Objective --->
+<h1>&nbsp;Objective</h1> 
+<p>Seeking a position in the computer engineering field utilizing programming and design skills, with an interest in user security and experience.</p>
+
+<!--- Experience --->
+<h1>&nbsp;Experience</h1> 
+<p>See examples of my design work <a href="#examples">here</a>.</p>
+<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+
+<tr>
+<td class="colA"><br><b>University of Michigan &mdash; Astronomy Department</b></td>
+<td class="colB">Ann Arbor, MI</td>
+</tr>
+<tr>
+<td class="colA"><i>Computer Consultant</i></td>
+<td class="colB">Nov 2010 &mdash; April 2011</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Customized and built open-source software for LINUX and Mac systems for staff</li>
+<li>Built and installed operating systems on new consoles</li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="colA"><br><b>Arts at Michigan</b></td>
+<td class="colB">Ann Arbor, MI</td>
+</tr>
+<tr>
+<td class="colA"><i>Webmaster (<a href="http://www3.arts.umich.edu" target="_blank">Launch Site</a>)</i></td>
+<td class="colB">Jul 2010 &mdash; Nov 2010</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Implemented interactive Web 2.0 tools to emphasize the purpose of the website</li>
+<li>Monitored and sought appropriate promotion opportunities to increase traffic</li>
+</ul>
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td class="colA"><br><b>New&Used Pawn Shop</b></td>
+<td class="colB">Jonesville, MI</td>
+</tr>
+<tr>
+<td class="colA"><i>Advertising Director</i></td>
+<td class="colB">Jan 2009 &mdash; Present</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Designed paraphernalia and created a distribution plan to maximize publicity</li>
+<li>Created documents for everything from inventory tracking to letterheads</li>
+<li>Implemented an outlet for online sales</li>
+</ul>
+</div>
+</td>
+</tr>
+
+</table>
+
+<!-- Skills -->
+<h1>&nbsp;Skills</h1>
+<table style="font-family: arial; color: #000000; font-size: 12px;" width="60%">
+
+<tr>
+<td valign="top"><b>Computer</b></td>
+<td>
+Environments: Windows 95/98/2000/VISTA/7, Linux, Mac OSX Snow Leopard<br>
+Languages: C++ (basic), Matlab (basic), Python (basic)
+</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Graphic Design</b></td>
+<td>Adept and creative in computer graphics and video effect skills in Adobe Photoshop, Illustrator, Sony Vegas</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Web Design</b></td>
+<td>Proficient in Adobe Dreamweaver, HTML, CSS, and basic knowledge of PHP and javascript</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Language</b></td>
+<td>Conversational in Cantonese Chinese</td>
+</tr>
+
+<tr>
+<td valign="top"><b>Other</b></td>
+<td>Competency in Microsoft Word, PowerPoint, Excel, and Outlook</td>
+</tr>
+</table>
+
+<!--- Activities --->
+<h1>&nbsp;Activities</h1>
+<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+
+<tr>
+<td class="colA"><b>Solar Car Team</b></td>
+<td class="colB">Fall 2008&mdash;Winter 2011</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Events Coordinator, Winter 2009</li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="colA"><b>Taiwan Students Association</b></td>
+<td class="colB">Fall 2008&mdash;Winter 2011</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>External Public Relations, Fall 2009&mdash;Fall 2010</li>
+<li><a href="http://umich.edu/~taiwan" target="_blank">Webmaster</a>, Winter 2009&mdash;present</li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="colA"><b>alpha Kappa Delta Phi, Sorority Inc.</b></td>
+<td class="colB">Winter 2009&mdash;Fall 2013</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Vice President New Member Education, Fall 2013</li>
+<li>Vice President External Affairs, Fall 2010&mdash;Winter 2011</li>
+<li>Publicity Chair, Fall 2010&mdash;Winter 2011</li>
+<li>Webmaster, Fall 2010&mdash;present</li>
+</ul>
+</div>
+</td>
+</tr>
+
+<tr>
+<td><b>Asian/Pacific Islander-American (APIA) Heritage Month</b></td>
+<td>Winter 2011</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="tab">
+<ul>
+<li>Co&ndash;president, Winter 2011</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+
+<!---Education --->
+<h1>&nbsp;Education</h1>
+<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+
+<tr>
+<td class="colA"><b>University of Michigan &mdash; Ann Arbor</b></td>
+<td class="colB">Ann Arbor, MI</td>
+</tr>
+<tr>
+<td class="colA"><i>Major in Computer Engineering</i></td>
+<td class="colB">September 2008 &mdash; May 2012</td>
+</tr>
+</table>
+
+<h1>&nbsp;Awards</h1>
+
+<a name="examples"><h1>&nbsp;Examples</h1></a>
+<div class="container">
+<h2 class="trigger">Web</h2>
+<div class="toggle_container">
+	<div class="block">
+		<h3>Web Work</h3>
+		<!--Content-->
+		<p>All of these websites were conceptualized and coded by me.  Also, all the graphics for the layout were made by me.  I used HTML and CSS hardcoding for all of these websites, but I am also knowledgeable with Dreamweaver and iWeb.<br>
+		<div class="content">
+		 <a class="help" href="akdfquick.html"><img src="thumbnails/akdphi.jpg"></a>
+		 <a class="help" href="taiwanquick.html"><img src="thumbnails/taiwan.jpg"></a>
+		 </div>
+		</p>
+	</div>
+</div>
+
+<h2 class="trigger">Print</h2>
+<div class="toggle_container">
+	<div class="block">
+		<h3>Print Work</h3>
+		<!--Content-->
+		<p>All of these graphics were conceptualized and designed by myself.  I used Adobe Photoshop for most of them.  I am also knowledgable in Adobe Illustrator.<br>
+		<div class="content">
+		 <a class="help" href="fusionquick.html"><img src="thumbnails/fusion.jpg"></a>
+		 <a class="help" href="alteregoquick.html"><img src="thumbnails/alterego.jpg"></a>
+		 <a class="help" href="winterwonderlandquick.html"><img src="thumbnails/winterwonderland.jpg"></a>
+		 <a class="help" href="thinkpinkquick.html"><img src="thumbnails/thinkpink.jpg"></a>
+		 <a class="help" href="tpticketquick.html"><img src="thumbnails/tpticket.jpg"></a>
+		 <a class="help" href="coasttocoastquick.html"><img src="thumbnails/coasttocoast.jpg"></a>
+		 </div>
+		</p>
+	</div>
+</div>
+
+<h2 class="trigger">Video</h2>
+<div class="toggle_container">
+	<div class="block">
+		<h3>Video Work</h3>
+		<!--Content-->
+		<p>Most videos made with Sony Vegas or Windows Movie Maker.<br>
+		<div class="content">
+		 <a class="help" href="test.html">Fast Narrow Pageslide</a>
+		 </div>
+		</p>
+	</div>
+</div>
+
+<h2 class="trigger">Apparel</h2>
+<div class="toggle_container">
+	<div class="block">
+		<h3>Content Header</h3>
+		<!--Content-->
+		<p>lalalalla<br>
+		<div class="content">
+		 <a class="help" href="test.html">Fast Narrow Pageslide</a>
+		 </div>
+		</p>
+	</div>
+</div>
+</div>
+ 
+</body> 
+ 
 </html>
