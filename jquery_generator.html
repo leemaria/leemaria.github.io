@@ -1,0 +1,97 @@
+<html>
+<head>
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+function generateCode(form){
+ 
+    var inputElems = document.getElementsByTagName("input"),
+    count = 0;
+
+    for (var i=0; i<inputElems.length; i++) {       
+       if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+          count++;
+       }
+    }
+    MaxLoc=count;
+    
+    AKBC = document.inputForm.AKBC.checked;
+	ALBC = document.inputForm.ALBC.checked;
+	BBBC = document.inputForm.BBBC.checked; 
+
+   	output = 
+    	'project = ASSET AND ("Client Contact" in cascadeOption';
+
+			// British Columbia
+      for (count; count>0; count--){
+      
+      	if (count == MaxLoc) {
+        	output += '(';
+        }
+        else {
+        	output += ' OR "Client Contact" in cascadeOption(';
+        }
+        
+        if (AKBC) {
+        	output += '"BC", "Akamina Kishinena (AKBC)")';
+			AKBC=false;
+        }
+        else if (ALBC) {
+        	output += '"BC", "Alice Lake (ALBC)")';
+			ALBC=false;
+        }
+        else if (BBBC) {
+        	output += '"BC", "Bamberton (BBBC)")';
+			BBBC=false;
+        }
+        else {
+        	null;
+        }
+      }
+			
+		
+		output += ')';
+
+  
+ 	
+  document.inputForm.source.value = output;
+  
+  return output;
+ 
+ }
+</script>
+
+
+<div class="code-generator">
+	<form name="inputForm" id="inputForm">
+	
+		<!------------------- British Columbia ------------------->
+		<fieldset>
+			<legend>British Columbia (BC)</legend>
+
+		<div>
+			<input name="input" id="AKBC" type="checkbox"> Akamina Kishinena (AKBC)<br>
+			<input name="input" id="ALBC" type="checkbox"> Alice Lake (ALBC)<br>
+			<input name="input" id="BBBC" type="checkbox"> Bamberton (BBBC)
+
+		</div>
+
+		</fieldset>	
+	
+	
+		<!------------------- GENERATE CODE BOX ------------------->
+		<fieldset>
+			<legend>Generated JQuery</legend>
+			<div>
+				<input type="button" value="Generate HTML Code!" onClick="javascript:generateCode();">
+			</div>
+			<div>
+				<p>Copy and paste the following code into a JIRA's advanced search box</p>
+				<textarea name="source" onclick="this.focus();this.select()" cols="150"></textarea>
+			</div>
+		</fieldset>
+	</form>
+</div>
