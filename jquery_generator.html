@@ -1,5 +1,18 @@
 <html>
 <head>
+<style>
+td {
+	border: 3px solid black;
+    vertical-align:top;
+}
+
+th {
+    padding: 8px;
+	font-size: 15pt;
+	background-color:#A8A8A8;
+}
+
+</style>
 </head>
 
 <body>
@@ -17,24 +30,28 @@ function generateCode(form){
        }
     }
     MaxLoc=count;
-    
+
+	<!--- British Columbia --->
     AKBC = document.inputForm.AKBC.checked;
 	ALBC = document.inputForm.ALBC.checked;
 	BBBC = document.inputForm.BBBC.checked; 
+	
+	<!--- Camis --->
+	AACAM = document.inputForm.AACAM.checked; 
+	GCAM = document.inputForm.GCAM.checked; 
 
    	output = 
     	'project = ASSET AND ("Client Contact" in cascadeOption';
 
-			// British Columbia
+			
       for (count; count>0; count--){
       
-      	if (count == MaxLoc) {
-        	output += '(';
-        }
-        else {
-        	output += ' OR "Client Contact" in cascadeOption(';
-        }
+		// Leading Text
+      	if (count == MaxLoc)  output += '(';
+        else output += ' OR "Client Contact" in cascadeOption(';
         
+		// Locations
+		<!----- British Columbia ----->
         if (AKBC) {
         	output += '"BC", "Akamina Kishinena (AKBC)")';
 			AKBC=false;
@@ -43,16 +60,198 @@ function generateCode(form){
         	output += '"BC", "Alice Lake (ALBC)")';
 			ALBC=false;
         }
+		else if (BCAB) {
+			output += '"BC", "Alpine Club (BCAC)")';
+			BCAB=false;
+		}
         else if (BBBC) {
         	output += '"BC", "Bamberton (BBBC)")';
 			BBBC=false;
         }
+		
+		
+/*
+output += '"BC", "Bear Creek (BCBC)")';
+output += '"BC", "Beatton (BEBC)")';
+output += '"BC", "Beaumont (BMBC)")';
+output += '"BC", "Berg Lake (BGBC)")';
+output += '"BC", "Big Bar Lake (BRBC)")';
+output += '"BC", "Birkenhead Lake (BHBC)")';
+output += '"BC", "Blanket Creek (BLBC)")';
+output += '"BC", "Bowron Lake (BOBC)")';
+output += '"BC", "Bromley Rock (BYBC)")';
+output += '"BC", "Bugaboo (BUBC)")';
+output += '"BC", "Cape Scott (CSBC)")';
+output += '"BC", "Cariboo - Cariboo Bowron (BCBO)")';
+output += '"BC", "Cariboo - Cariboo North (BCCN)")';
+output += '"BC", "Cariboo - Cariboo South (BCCS)")';
+output += '"BC", "Carmanah Walbran (CMBC)")';
+output += '"BC", "Carp Lake Island (CABC)")';
+output += '"BC", "Cascade Rec Area (CDBC)")';
+output += '"BC", "Cathedral (CTBC)")';
+output += '"BC", "Champion Lakes (CHBC)")';
+output += '"BC", "Charlie Lake (CLBC)")';
+output += '"BC", "Chilliwack Lake (CIBC)")';
+output += '"BC", "Conkle Lake (COBC)")';
+output += '"BC", "Cowichan River (CWBC)")';
+output += '"BC", "Crooked River (CRBC)")';
+output += '"BC", "Cultus Lake (CUBC)")';
+output += '"BC", "Desolation Sound (DSBC)")';
+output += '"BC", "Desolation Sound Okeover Bundle (BCDO)")';
+output += '"BC", "Dionisio (DOBC)")';
+output += '"BC", "Discovery Island (DIBC)")';
+output += '"BC", "E. C. Manning (ECBC)")';
+output += '"BC", "Elk Falls (EFBC)")';
+output += '"BC", "Elk Lakes (EKBC)")';
+output += '"BC", "Ellison (ELBC)")';
+output += '"BC", "Englishman River Falls (ERBC)")';
+output += '"BC", "Fillongley (FLBC)")';
+output += '"BC", "Fintry (FIBC)")';
+output += '"BC", "Flores Island (FOBC)")';
+output += '"BC", "French Beach (FBBC)")';
+output += '"BC", "Garibaldi (GRBC)")';
+output += '"BC", "Gibson Marine (GMBC)")';
+output += '"BC", "Gladstone (GABC)")';
+output += '"BC", "Golden Ears (GEBC)")';
+output += '"BC", "Goldstream (GSBC)")';
+output += '"BC", "Gordon Bay (GBBC)")';
+output += '"BC", "Green Lake (GLBC)")';
+output += '"BC", "Halkett Bay (HBBC)")';
+output += '"BC", "Haynes Point (HPBC)")';
+output += '"BC", "Headquarters (HQBC)")';
+output += '"BC", "Herald (HEBC)")';
+output += '"BC", "Horsefly Lake (HFBC)")';
+output += '"BC", "Inland Lake (ILBC)")';
+output += '"BC", "Joffre Lakes (JOBC)")';
+output += '"BC", "Juan de Fuca (FJBC)")';
+output += '"BC", "Kekuli Bay (KBBC)")';
+output += '"BC", "Kentucky Alleyne (KABC)")';
+output += '"BC", "Kettle River (KRBC)")';
+output += '"BC", "Kikomun Creek (KIBC)")';
+output += '"BC", "Kleanza Creak (KLBC)")';
+output += '"BC", "Kokanee Creek (KOBC)")';
+output += '"BC", "Kokanee Glacier (KGBC)")';
+output += '"BC", "Kootenay - Kootenay North-East (BCNE)")';
+output += '"BC", "Kootenay - Kootenay South-East (BCSE)")';
+output += '"BC", "Kootenay - Kootenay South-West (BCSW)")';
+output += '"BC", "Lac La Hache (LHBC)")';
+output += '"BC", "Lac Le Jeune (LJBC)")';
+output += '"BC", "Lakelse Lake (LABC)")';
+output += '"BC", "Liard River Hot Springs (LRBC)")';
+output += '"BC", "Little Qualicum Falls (LQBC)")';
+output += '"BC", "Loveland Bay (LBBC)")';
+output += '"BC", "Mabel Lake (MABC)")';
+output += '"BC", "Martha Creek (MCBC)")';
+output += '"BC", "McDonald Creek (MDBC)")';
+output += '"BC", "Meziadan Lake (MZBC)")';
+output += '"BC", "Miracle Beach (MBBC)")';
+output += '"BC", "Moberly Lake (MYBC)")';
+output += '"BC", "Monashee (MEBC)")';
+output += '"BC", "Monck (MOBC)")';
+output += '"BC", "Montague Harbour Marine (MHBC)")';
+output += '"BC", "Morton Lake (MNBC)")';
+output += '"BC", "Mount Assiniboine (MTBC)")';
+output += '"BC", "Mount Fernie (MFBC)")';
+output += '"BC", "Mount Robson (MRBC)")';
+output += '"BC", "Mount Seymour (MSBC)")';
+output += '"BC", "Moyie Lake (MLBC)")';
+output += '"BC", "Nairn Falls (NFBC)")';
+output += '"BC", "Newcastle Island Marine (NIBC)")';
+output += '"BC", "North Thompson River (NTBC)")';
+output += '"BC", "Okanagan - South Okanagan-Boundary (BCBD)")';
+output += '"BC", "Okanagan - Central Okanagan-Similkameen (BCOS)")';
+output += '"BC", "Okanagan - EC Manning (BCEC)")';
+output += '"BC", "Okanagan - North Okanagan (BCNO)")';
+output += '"BC", "Okanagan Lake North (ONBC)")';
+output += '"BC", "Okanagan Lake South (OSBC)")';
+output += '"BC", "Omineca - Prince George (BCPG)")';
+output += '"BC", "Omineca - Mt Robson (BCMR)")';
+output += '"BC", "Otter Lake (OTBC)")';
+output += '"BC", "Paarens Beach (PABC)")';
+output += '"BC", "Paul Lake (PUBC)")';
+output += '"BC", "Peace - Liard (BCPL)")';
+output += '"BC", "Peace - Peace North (BCPN)")';
+output += '"BC", "Peace - Peace South (BCPS)")';
+output += '"BC", "Peace Arch (PEBC)")';
+output += '"BC", "Pilot Bay (PTBC)")';
+output += '"BC", "Pirates Cove Marine (PIBC)")';
+output += '"BC", "Plumper Cove Marine (PVBC)")';
+output += '"BC", "Porpoise Bay (PBBC)")';
+output += '"BC", "Porteau Cove (PCBC)")';
+output += '"BC", "Premier Lake (PLBC)")';
+output += '"BC", "Prudhome Lake (PDBC)")';
+output += '"BC", "Purden Lake (PNBC)")';
+output += '"BC", "Rathtrevor Beach (RTBC)")';
+output += '"BC", "Red Bluff (RBBC)")';
+output += '"BC", "Rolley Lake (RLBC)")';
+output += '"BC", "Ruckle (RUBC)")';
+output += '"BC", "Saltery Bay (SBBC)")';
+output += '"BC", "Sasquatch (SQBC)")';
+output += '"BC", "Shannon Falls (SFBC)")';
+output += '"BC", "Shuswap Lake (SHBC)")';
+output += '"BC", "Skagit Valley (SVBC)")';
+output += '"BC", "Skeena - Meziadin-Hanna-Tintina (BCMH)")';
+output += '"BC", "Skeena - Smithers (BCSR)")';
+output += '"BC", "Skeena - Smithers-Hwy37 (BCSM)")';
+output += '"BC", "Skeena - Terrace-Prince Rupert (BCTR)")';
+output += '"BC", "Smelt Bay (SMBC)")';
+output += '"BC", "South Coast - Cultus-Chilliwack (BCCH)")';
+output += '"BC", "South Coast - East Fraser (BCFR)")';
+output += '"BC", "South Coast - Golden Ears-Rolley Lake (BCGL)")';
+output += '"BC", "South Coast - North Sunshine Coast (BCNC)")';
+output += '"BC", "South Coast - Sea-to-Sky (BCSY)")';
+output += '"BC", "South Coast - South Sunshine Coast (BCSU)")';
+output += '"BC", "Sowchea Bay (SWBC)")';
+output += '"BC", "Sproat Lake (SPBC)")';
+output += '"BC", "Stamp River (SRBC)")';
+output += '"BC", "Stemwinder (STBC)")';
+output += '"BC", "Strathcona (SCBC)")';
+output += '"BC", "Strathcona Backcountry (BCSB)")';
+output += '"BC", "Syringa (SYBC)")';
+output += '"BC", "Taylor Arm (TABC)")';
+output += '"BC", "Ten Mile Lake (TMBC)")';
+output += '"BC", "Thompson - South Thompson (BCST)")';
+output += '"BC", "Thompson - Thompson Kamloops (BCTK)")';
+output += '"BC", "Thompson - Thompson Merritt (BCMT)")';
+output += '"BC", "Thompson - Shuswap Marine-Herald (BCSH)")';
+output += '"BC", "Thompson - Wells Gray (BCWG)")';
+output += '"BC", "Top-Of-The-World (TOBC)")';
+output += '"BC", "Tudyah Lake (TUBC)")';
+output += '"BC", "Tweedsmuir South (TWBC)")';
+output += '"BC", "Tyhee Lake (TYBC)")';
+output += '"BC", "Wallace Island Marine (WIBC)")';
+output += '"BC", "Wasa Lake (WLBC)")';
+output += '"BC", "Wells Gray (WGBC)")';
+output += '"BC", "Wells Gray - Murtle Lake (WMBC)")';
+output += '"BC", "West Coast - Cape Scott (BCCA)")';
+output += '"BC", "West Coast - Cowichan (BCCO)")';
+output += '"BC", "West Coast - Mid Island (BCMD)")';
+output += '"BC", "West Coast - North Island (BCNR)")';
+output += '"BC", "West Coast - Snuneymuxw First Nation (BCSF)")';
+output += '"BC", "West Coast - South Gulf Islands (BCGU)")';
+output += '"BC", "West Coast - Victoria (BCVI)")';
+output += '"BC", "West Lake (WEBC)")';
+output += '"BC", "Whiskers Point (WPBC)")';
+output += '"BC", "Whiteswan Lake (WHBC)")'; 
+*/
+		
+		<!----- Camis ----->
+		else if (AACAM) {
+			output += '"Camis", "Ann Arbor Office")';
+			AACAM=false;
+		}
+        else if (GCAM) {
+        	output += '"Camis", "Guelph Office")';
+			GCAM=false;
+        }
+		
         else {
         	null;
         }
       }
 			
 		
+		//Ending Text
 		output += ')';
 
   
@@ -66,27 +265,388 @@ function generateCode(form){
 
 
 <div class="code-generator">
-	<form name="inputForm" id="inputForm">
 	
+	<form name="inputForm" id="inputForm">
+	<table>
+	<!---- Table Headers, First Row ---->
+	<tr>
+		<th>British Columbia</th>
+		<th>CAN Conservation Authorities</th>
+		<th>Small CAN Clients</th>
+	</tr>
+	
+	<!---------------------------- ROW ONE - SMALL CAN CLIENTS ---------------------------->
+	<tr>
 		<!------------------- British Columbia ------------------->
+		<td>
 		<fieldset>
 			<legend>British Columbia (BC)</legend>
 
 		<div>
 			<input name="input" id="AKBC" type="checkbox"> Akamina Kishinena (AKBC)<br>
 			<input name="input" id="ALBC" type="checkbox"> Alice Lake (ALBC)<br>
-			<input name="input" id="BBBC" type="checkbox"> Bamberton (BBBC)
-
+			<input name="input" id="BCAC" type="checkbox"> Alpine Club (BCAC)<br>
+			<input name="input" id="BBBC" type="checkbox"> Bamberton (BBBC)<br>
+			<input name="input" id="BCBC" type="checkbox"> Bear Creek (BCBC)<br>
+			<input name="input" id="BEBC" type="checkbox"> Beatton (BEBC)<br>
+			<input name="input" id="BMBC" type="checkbox"> Beaumont (BMBC)<br>
+			<input name="input" id="BGBC" type="checkbox"> Berg Lake (BGBC)<br>
+			<input name="input" id="BRBC" type="checkbox"> Big Bar Lake (BRBC)<br>
+			<input name="input" id="BHBC" type="checkbox"> Birkenhead Lake (BHBC)<br>
+			<input name="input" id="BLBC" type="checkbox"> Blanket Creek (BLBC)<br>
+			<input name="input" id="BOBC" type="checkbox"> Bowron Lake (BOBC)<br>
+			<input name="input" id="BYBC" type="checkbox"> Bromley Rock (BYBC)<br>
+			<input name="input" id="BUBC" type="checkbox"> Bugaboo (BUBC)<br>
+			<input name="input" id="CSBC" type="checkbox"> Cape Scott (CSBC)<br>
+			<input name="input" id="BCBO" type="checkbox"> Cariboo - Cariboo Bowron (BCBO)<br>
+			<input name="input" id="BCBN" type="checkbox"> Cariboo - Cariboo North (BCCN)<br>
+			<input name="input" id="BCCS" type="checkbox"> Cariboo - Cariboo South (BCCS)<br>
+			<input name="input" id="CMBC" type="checkbox"> Carmanah Walbran (CMBC)<br>
+			<input name="input" id="CABC" type="checkbox"> Carp Lake Island (CABC)<br>
+			<input name="input" id="CDBC" type="checkbox"> Cascade Rec Area (CDBC)<br>
+			<input name="input" id="CTBC" type="checkbox"> Cathedral (CTBC)<br>
+			<input name="input" id="CHBC" type="checkbox"> Champion Lakes (CHBC)<br>
+			<input name="input" id="CLBC" type="checkbox"> Charlie Lake (CLBC)<br>
+			<input name="input" id="CIBC" type="checkbox"> Chilliwack Lake (CIBC)<br>
+			<input name="input" id="COBC" type="checkbox"> Conkle Lake (COBC)<br>
+			<input name="input" id="CWBC" type="checkbox"> Cowichan River (CWBC)<br>
+			<input name="input" id="CRBC" type="checkbox"> Crooked River (CRBC)<br>
+			<input name="input" id="CUBC" type="checkbox"> Cultus Lake (CUBC)<br>
+			<input name="input" id="DSBC" type="checkbox"> Desolation Sound (DSBC)<br>
+			<input name="input" id="BCDO" type="checkbox"> Desolation Sound Okeover Bundle (BCDO)<br>
+			<input name="input" id="DOBC" type="checkbox"> Dionisio (DOBC)<br>
+			<input name="input" id="DIBC" type="checkbox"> Discovery Island (DIBC)<br>
+			<input name="input" id="ECBC" type="checkbox"> E. C. Manning (ECBC)<br>
+			<input name="input" id="EFBC" type="checkbox"> Elk Falls (EFBC)<br>
+			<input name="input" id="EKBC" type="checkbox"> Elk Lakes (EKBC)<br>
+			<input name="input" id="ELBC" type="checkbox"> Ellison (ELBC)<br>
+			<input name="input" id="ERBC" type="checkbox"> Englishman River Falls (ERBC)<br>
+			<input name="input" id="FLBC" type="checkbox"> Fillongley (FLBC)<br>
+			<input name="input" id="FIBC" type="checkbox"> Fintry (FIBC)<br>
+			<input name="input" id="FOBC" type="checkbox"> Flores Island (FOBC)<br>
+			<input name="input" id="FBBC" type="checkbox"> French Beach (FBBC)<br>
+			<input name="input" id="GRBC" type="checkbox"> Garibaldi (GRBC)<br>
+			<input name="input" id="GMBC" type="checkbox"> Gibson Marine (GMBC)<br>
+			<input name="input" id="GABC" type="checkbox"> Gladstone (GABC)<br>
+			<input name="input" id="GEBC" type="checkbox"> Golden Ears (GEBC)<br>
+			<input name="input" id="GSBC" type="checkbox"> Goldstream (GSBC)<br>
+			<input name="input" id="GBBC" type="checkbox"> Gordon Bay (GBBC)<br>
+			<input name="input" id="GLBC" type="checkbox"> Green Lake (GLBC)<br>
+			<input name="input" id="HBBC" type="checkbox"> Halkett Bay (HBBC)<br>
+			<input name="input" id="HPBC" type="checkbox"> Haynes Point (HPBC)<br>
+			<input name="input" id="HQBC" type="checkbox"> Headquarters (HQBC)<br>
+			<input name="input" id="HEBC" type="checkbox"> Herald (HEBC)<br>
+			<input name="input" id="HFBC" type="checkbox"> Horsefly Lake (HFBC)<br>
+			<input name="input" id="ILBC" type="checkbox"> Inland Lake (ILBC)<br>
+			<input name="input" id="JOBC" type="checkbox"> Joffre Lakes (JOBC)<br>
+			<input name="input" id="FJBC" type="checkbox"> Juan de Fuca (FJBC)<br>
+			<input name="input" id="KBBC" type="checkbox"> Kekuli Bay (KBBC)<br>
+			<input name="input" id="KABC" type="checkbox"> Kentucky Alleyne (KABC)<br>
+			<input name="input" id="KRBC" type="checkbox"> Kettle River (KRBC)<br>
+			<input name="input" id="KIBC" type="checkbox"> Kikomun Creek (KIBC)<br>
+			<input name="input" id="KLBC" type="checkbox"> Kleanza Creak (KLBC)<br>
+			<input name="input" id="KOBC" type="checkbox"> Kokanee Creek (KOBC)<br>
+			<input name="input" id="KGBC" type="checkbox"> Kokanee Glacier (KGBC)<br>
+			<input name="input" id="BCNE" type="checkbox"> Kootenay - Kootenay North-East (BCNE)<br>
+			<input name="input" id="BCSE" type="checkbox"> Kootenay - Kootenay South-East (BCSE)<br>
+			<input name="input" id="BCSW" type="checkbox"> Kootenay - Kootenay South-West (BCSW)<br>
+			<input name="input" id="LHBC" type="checkbox"> Lac La Hache (LHBC)<br>
+			<input name="input" id="LJBC" type="checkbox"> Lac Le Jeune (LJBC)<br>
+			<input name="input" id="LABC" type="checkbox"> Lakelse Lake (LABC)<br>
+			<input name="input" id="LRBC" type="checkbox"> Liard River Hot Springs (LRBC)<br>
+			<input name="input" id="LQBC" type="checkbox"> Little Qualicum Falls (LQBC)<br>
+			<input name="input" id="LBBC" type="checkbox"> Loveland Bay (LBBC)<br>
+			<input name="input" id="MABC" type="checkbox"> Mabel Lake (MABC)<br>
+			<input name="input" id="MCBC" type="checkbox"> Martha Creek (MCBC)<br>
+			<input name="input" id="MDBC" type="checkbox"> McDonald Creek (MDBC)<br>
+			<input name="input" id="MZBC" type="checkbox"> Meziadan Lake (MZBC)<br>
+			<input name="input" id="MBBC" type="checkbox"> Miracle Beach (MBBC)<br>
+			<input name="input" id="MYBC" type="checkbox"> Moberly Lake (MYBC)<br>
+			<input name="input" id="MEBC" type="checkbox"> Monashee (MEBC)<br>
+			<input name="input" id="MOBC" type="checkbox"> Monck (MOBC)<br>
+			<input name="input" id="MHBC" type="checkbox"> Montague Harbour Marine (MHBC)<br>
+			<input name="input" id="MNBC" type="checkbox"> Morton Lake (MNBC)<br>
+			<input name="input" id="MTBC" type="checkbox"> Mount Assiniboine (MTBC)<br>
+			<input name="input" id="MFBC" type="checkbox"> Mount Fernie (MFBC)<br>
+			<input name="input" id="MRBC" type="checkbox"> Mount Robson (MRBC)<br>
+			<input name="input" id="MSBC" type="checkbox"> Mount Seymour (MSBC)<br>
+			<input name="input" id="MLBC" type="checkbox"> Moyie Lake (MLBC)<br>
+			<input name="input" id="NFBC" type="checkbox"> Nairn Falls (NFBC)<br>
+			<input name="input" id="NIBC" type="checkbox"> Newcastle Island Marine (NIBC)<br>
+			<input name="input" id="NTBC" type="checkbox"> North Thompson River (NTBC)<br>
+			<input name="input" id="BCBD" type="checkbox"> Okanagan - South Okanagan-Boundary (BCBD)<br>
+			<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			<input name="input" id="BCEC" type="checkbox"> Okanagan - EC Manning (BCEC)<br>
+			<input name="input" id="BCNO" type="checkbox"> Okanagan - North Okanagan (BCNO)<br>
+			<input name="input" id="ONBC" type="checkbox"> Okanagan Lake North (ONBC)<br>
+			<input name="input" id="OSBC" type="checkbox"> Okanagan Lake South (OSBC)<br>
+			<input name="input" id="BCPG" type="checkbox"> Omineca - Prince George (BCPG)<br>
+			<input name="input" id="BCMR" type="checkbox"> Omineca - Mt Robson (BCMR)<br>
+			<input name="input" id="OTBC" type="checkbox"> Otter Lake (OTBC)<br>
+			<input name="input" id="PABC" type="checkbox"> Paarens Beach (PABC)<br>
+			<input name="input" id="PUBC" type="checkbox"> Paul Lake (PUBC)<br>
+			<input name="input" id="BCPL" type="checkbox"> Peace - Liard (BCPL)<br>
+			<input name="input" id="BCPN" type="checkbox"> Peace - Peace North (BCPN)<br>
+			<input name="input" id="BCPS" type="checkbox"> Peace - Peace South (BCPS)<br>
+			<input name="input" id="PEBC" type="checkbox"> Peace Arch (PEBC)<br>
+			<input name="input" id="PTBC" type="checkbox"> Pilot Bay (PTBC)<br>
+			<input name="input" id="PIBC" type="checkbox"> Pirates Cove Marine (PIBC)<br>
+			<input name="input" id="PVBC" type="checkbox"> Plumper Cove Marine (PVBC)<br>
+			<input name="input" id="PBBC" type="checkbox"> Porpoise Bay (PBBC)<br>
+			<input name="input" id="PCBC" type="checkbox"> Porteau Cove (PCBC)<br>
+			<input name="input" id="PLBC" type="checkbox"> Premier Lake (PLBC)<br>
+			<input name="input" id="PDBC" type="checkbox"> Prudhome Lake (PDBC)<br>
+			<input name="input" id="PNBC" type="checkbox"> Purden Lake (PNBC)<br>
+			<input name="input" id="RTBC" type="checkbox"> Rathtrevor Beach (RTBC)<br>
+			<input name="input" id="RBBC" type="checkbox"> Red Bluff (RBBC)<br>
+			<input name="input" id="RLBC" type="checkbox"> Rolley Lake (RLBC)<br>
+			<input name="input" id="RUBC" type="checkbox"> Ruckle (RUBC)<br>
+			<input name="input" id="SBBC" type="checkbox"> Saltery Bay (SBBC)<br>
+			<input name="input" id="SQBC" type="checkbox"> Sasquatch (SQBC)<br>
+			<input name="input" id="SFBC" type="checkbox"> Shannon Falls (SFBC)<br>
+			<input name="input" id="SHBC" type="checkbox"> Shuswap Lake (SHBC)<br>
+			<input name="input" id="SVBC" type="checkbox"> Skagit Valley (SVBC)<br>
+			<input name="input" id="BCMH" type="checkbox"> Skeena - Meziadin-Hanna-Tintina (BCMH)<br>
+			<input name="input" id="BCSR" type="checkbox"> Skeena - Smithers (BCSR)<br>
+			<input name="input" id="BCSM" type="checkbox"> Skeena - Smithers-Hwy37 (BCSM)<br>
+			<input name="input" id="BCTR" type="checkbox"> Skeena - Terrace-Prince Rupert (BCTR)<br>
+			<input name="input" id="SMBC" type="checkbox"> Smelt Bay (SMBC)<br>
+			<input name="input" id="BCCH" type="checkbox"> South Coast - Cultus-Chilliwack (BCCH)<br>
+			<input name="input" id="BCFR" type="checkbox"> South Coast - East Fraser (BCFR)<br>
+			<input name="input" id="BCGL" type="checkbox"> South Coast - Golden Ears-Rolley Lake (BCGL)<br>
+			<input name="input" id="BCNC" type="checkbox"> South Coast - North Sunshine Coast (BCNC)<br>
+			<input name="input" id="BCSY" type="checkbox"> South Coast - Sea-to-Sky (BCSY)<br>
+			<input name="input" id="BCSU" type="checkbox"> South Coast - South Sunshine Coast (BCSU)<br>
+			<input name="input" id="SWBC" type="checkbox"> Sowchea Bay (SWBC)<br>
+			<input name="input" id="SPBC" type="checkbox"> Sproat Lake (SPBC)<br>
+			<input name="input" id="SRBC" type="checkbox"> Stamp River (SRBC)<br>
+			<input name="input" id="STBC" type="checkbox"> Stemwinder (STBC)<br>
+			<input name="input" id="SCBC" type="checkbox"> Strathcona (SCBC)<br>
+			<input name="input" id="BCSB" type="checkbox"> Strathcona Backcountry (BCSB)<br>
+			<input name="input" id="SYBC" type="checkbox"> Syringa (SYBC)<br>
+			<input name="input" id="TABC" type="checkbox"> Taylor Arm (TABC)<br>
+			<input name="input" id="TMBC" type="checkbox"> Ten Mile Lake (TMBC)<br>
+			<input name="input" id="BCST" type="checkbox"> Thompson - South Thompson (BCST)<br>
+			<input name="input" id="BCTK" type="checkbox"> Thompson - Thompson Kamloops (BCTK)<br>
+			<input name="input" id="BCMT" type="checkbox"> Thompson - Thompson Merritt (BCMT)<br>
+			<input name="input" id="BCSH" type="checkbox"> Thompson - Shuswap Marine-Herald (BCSH)<br>
+			<input name="input" id="BCWG" type="checkbox"> Thompson - Wells Gray (BCWG)<br>
+			<input name="input" id="TOBC" type="checkbox"> Top-Of-The-World (TOBC)<br>
+			<input name="input" id="TUBC" type="checkbox"> Tudyah Lake (TUBC)<br>
+			<input name="input" id="TWBC" type="checkbox"> Tweedsmuir South (TWBC)<br>
+			<input name="input" id="TYBC" type="checkbox"> Tyhee Lake (TYBC)<br>
+			<input name="input" id="WIBC" type="checkbox"> Wallace Island Marine (WIBC)<br>
+			<input name="input" id="WLBC" type="checkbox"> Wasa Lake (WLBC)<br>
+			<input name="input" id="WGBC" type="checkbox"> Wells Gray (WGBC)<br>
+			<input name="input" id="WMBC" type="checkbox"> Wells Gray - Murtle Lake (WMBC)<br>
+			<input name="input" id="BCCA" type="checkbox"> West Coast - Cape Scott (BCCA)<br>
+			<input name="input" id="BCCO" type="checkbox"> West Coast - Cowichan (BCCO)<br>
+			<input name="input" id="BCMD" type="checkbox"> West Coast - Mid Island (BCMD)<br>
+			<input name="input" id="BCNR" type="checkbox"> West Coast - North Island (BCNR)<br>
+			<input name="input" id="BCSF" type="checkbox"> West Coast - Snuneymuxw First Nation (BCSF)<br>
+			<input name="input" id="BCGU" type="checkbox"> West Coast - South Gulf Islands (BCGU)<br>
+			<input name="input" id="BCVI" type="checkbox"> West Coast - Victoria (BCVI)<br>
+			<input name="input" id="WEBC" type="checkbox"> West Lake (WEBC)<br>
+			<input name="input" id="WPBC" type="checkbox"> Whiskers Point (WPBC)<br>
+			<input name="input" id="WHBC" type="checkbox"> Whiteswan Lake (WHBC)<br>
 		</div>
-
-		</fieldset>	
+		</fieldset>
+		</td>
 	
+		<!---- Conservation Areas ---->
+		<td>
+		<!------------------- Hamilton Conservation Area ------------------->		
+		<fieldset>
+			<legend>Hamilton Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Kettle Creek Conservation Area ------------------->
+		<fieldset>
+			<legend>Kettle Creek Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Long Point Conservation Area ---------------->
+		<fieldset>
+			<legend>Long Point Conservation Area </legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Maitland Valley Conservation Area ------------------->
+		<fieldset>
+			<legend>Maitland Valley Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Saugeen Valley Conservation Area ------------------->
+		<fieldset>
+			<legend>Saugeen Valley Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Toronto Conservation Area ------------------->
+		<fieldset>
+			<legend>Toronto Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		<!------------------- Upper Thames Conservation Area ------------------->
+		<fieldset>
+			<legend>Upper Thames Conservation Area</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		
+		</td>
+		
+		
+		<!---- Small CAN Clients ---->
+		<td>
+		<!------------------- Chilkoot Trail ------------------->
+		<fieldset>
+			<legend>Chilkoot Trail</legend>
+			<div>
+					<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+
+		<!------------------- Gatineau ------------------->
+		<fieldset>
+			<legend>Gatineau</legend>
+			<div>
+			</div>
+		</fieldset>
+		
+		<!------------------- Haliburton Highlands ------------------->
+		<fieldset>
+			<legend>Haliburton Highlands</legend>
+			<div>
+			</div>
+		</fieldset>
+		
+		<!------------------- New Brunswick ------------------->
+		<fieldset>
+			<legend>New Brunswick</legend>
+			<div>
+			</div>
+		</fieldset>
+		
+		<!------------------- Newfoundland and Labrador ------------------->
+		<fieldset>
+			<legend>Newfoundland and Labrador</legend>
+			<div>
+			</div>
+		</fieldset>
+		
+		<!------------------- Yukon ------------------->
+		<fieldset>
+			<legend>Yukon</legend>
+			<div>
+			</div>
+		</fieldset>
+		</td>
+	</tr>
+		
+	<!---- Table Headers, Second Row ---->
+	<tr>
+		<th>Nova Scotia</th>
+		<th>Ontario Parks</th>
+		<th>Saskatchewan</th>
+	</tr>
+		
+		<!---------------------------- ROW TWO - LARGE CAN CLIENTS ---------------------------->
+		<!---- Bigger CAN clients ---->
+	<tr>
+		<td>
+		<!------------------- Nova Scotia ------------------->
+		<fieldset>
+			<legend>Nova Scotia</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		</td>
+		
+		<td>
+		<!------------------- Ontario Parks ------------------->
+		<fieldset>
+			<legend>Ontario Parks</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		</td>
+		
+		<td>
+		<!------------------- Saskatchewan ------------------->
+		<fieldset>
+			<legend>Saskatchewan</legend>
+			<div>
+						<input name="input" id="BCOS" type="checkbox"> Okanagan - Central Okanagan-Similkameen (BCOS)<br>
+			</div>
+		</fieldset>
+		</td>	
+	</tr>
+		
+	<!---- Table Headers, Third Row ---->
+	<tr>
+		<th>Michigan</th>
+		<th>Washington</th>
+		<th>Camis</th>
+	</tr>
+	
+	<!---------------------------- ROW THREE - US CLIENTS ---------------------------->	
+	<tr>
+		<td>
+		<!------------------- Michigan ------------------->
+		<fieldset>
+			<legend>Michigan</legend>
+			<div>
+			</div>
+		</fieldset>
+		</td>
+	
+		<td>
+		<!------------------- Washington ------------------->
+		<fieldset>
+			<legend>Washington</legend>
+			<div>
+			</div>
+		</fieldset>
+		</td>
+		
+		<!------------------- Camis ------------------->
+		<td>
+		<fieldset>
+			<legend>Camis</legend>
+			<div>
+				<input name="input" id="AACAM" type="checkbox"> Ann Arbor Office<br>
+				<input name="input" id="GCAM" type="checkbox"> Guelph Office
+			</div>
+		</fieldset>
+		
+	</tr>
+	</table>
 	
 		<!------------------- GENERATE CODE BOX ------------------->
 		<fieldset>
 			<legend>Generated JQuery</legend>
 			<div>
-				<input type="button" value="Generate HTML Code!" onClick="javascript:generateCode();">
+				<input type="button" value="Generate Search Code!" onClick="javascript:generateCode();">
 			</div>
 			<div>
 				<p>Copy and paste the following code into a JIRA's advanced search box</p>
