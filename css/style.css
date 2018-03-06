@@ -1,0 +1,208 @@
+body {
+	margin: 0;
+	width: 99%;
+	font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	background-color: #fff;
+	padding-top: 20px;
+	overflow-x: hidden;
+
+}
+
+h1 {
+	width: 100%;
+	font-family: 'Playfair Display SC', serif;
+	font-size: 36px;
+	text-align: center;
+	padding: 1px;
+	letter-spacing: 2px;
+	vertical-align: middle;
+}
+
+h2 {
+	width: 100%;
+	font-family: Ubuntu, sans-serif;
+	text-align: center;
+
+}
+
+h3 {
+	font-family: 'Playfair Display SC', serif;
+}
+
+.jumbotron {
+	padding: 1%;
+	width: 100%;
+	background-color: #999;	
+	
+/*	background-image: url(/images/banner.jpg);
+	min-height: 300px;
+	height: 500px;
+	background-repeat: no-repeat no-repeat;
+	display: table;
+	vertical-align: middle;
+	text-align: center;
+	background-position: initial inital; */
+}
+
+.featured {
+	padding: 1%;
+	width: 100%;
+	background-color: #dedede;
+	text-align: center;
+}
+
+.shadow {
+    filter: drop-shadow(0 0 5px #333);
+}
+
+.about, .resume, .contact {
+	padding: 1%;
+	width: 100%;
+	text-align: center;
+}
+
+.more {
+	width: 100%;
+	padding: 1%;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+a {
+  color: #999999;
+  text-align: left;
+  margin: 1px;
+}
+footer a {
+	margin: 0px;
+}
+.button {
+	margin: 1%;
+	border: 1px;
+	border-style: solid;
+	border-color: #999;
+	text-decoration: none;
+	padding: 5px;
+	font-size: 30px;
+}
+
+.button:hover {
+		background-color: #999;
+		color: #fff;
+}
+
+nav {
+	width: 100%;
+	margin:0;
+	padding: 0;
+	background-color: #fff;
+	padding-bottom: 5px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* box-shadow: 10px 10px 8px #888888; */
+
+
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav a {
+	letter-spacing: 1px;
+	font-size: 30px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #dedede;
+}
+
+.icon {
+    display: none;
+	text-align: left;
+
+}
+
+
+
+footer {
+	padding: 1px;
+	width: 100%;
+	text-align: center;
+	background-color: #999;
+}
+
+
+
+.company {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+  padding: 10px;
+  background-color: #999;
+  border-radius: 3px;
+  margin: 5px;
+  vertical-align: top;
+}
+
+.info{
+  display: inline-block;
+  width: 600px;
+  text-align: left;
+  padding: 10px;
+  background-color: #dedede;
+  border-radius: 3px;
+  margin: 5px;
+
+}
+
+@media screen and (max-width:900px) {
+		.company, .info {
+        width: 98%;
+        display: block;
+    }
+}
+
+@media screen and (max-width:560px) {
+	nav li {
+		display: none;
+	}
+
+	.icon {
+		float: left;
+		display: inline-block;
+	}
+	
+	nav.responsive {position: relative;}
+	nav.responsive li.icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	nav.responsive li {
+		float: none;
+		display: inline;
+	}
+	nav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+	.company, .info {
+        width: 97%;
+        display: block;
+		padding-right:1px;
+    }
+
+}
