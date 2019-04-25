@@ -1,0 +1,18 @@
+$light-grey: #eeeeee;
+$pink: #e83a93;
+$dark-grey: #777777;
+
+@mixin diamond-base($size) {
+  height: $size;
+  width: $size;
+  text-align: center;
+  line-height: 0;
+  transform: rotate(45deg);
+}
+
+@mixin inner-diamond($size) {
+  height: $size;
+  width: $size;
+  transform: rotate(-45deg);
+  line-height: 0;
+}

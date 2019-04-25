@@ -1,0 +1,66 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: $dark-grey;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.375em;
+
+  letter-spacing: 0.75px;
+}
+
+a {
+  color: $pink;
+}
+
+a:hover{
+  color: $pink;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.24em;
+  span {
+    color: $pink;
+  }
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.22em;
+}
+
+label{
+  display: none;
+}
+
+section{
+  padding: 100px 0;
+}
+
+article {
+  text-align: left;
+}
+
+.container {
+  max-width: 1178px;
+  width: 80%;
+}
+
+.btn {
+  background-color: $pink;
+  color: #fff;
+}

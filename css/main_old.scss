@@ -1,0 +1,618 @@
+/*
+Original colors:
+
+$light-grey: #eeeeee;
+$pink: #e83a93;
+$dark-grey: #777777;
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+
+*/
+
+@mixin diamond-base($size) {
+  height: $size;
+  width: $size;
+  text-align: center;
+  line-height: 0;
+  transform: rotate(45deg);
+}
+
+@mixin inner-diamond($size) {
+  height: $size;
+  width: $size;
+  transform: rotate(-45deg);
+  line-height: 0;
+}
+
+$light-grey: #eeeeee;
+$pink: #e83a93;
+$dark-grey: #777777;
+
+
+
+@font-face {
+  font-family: "Homizio Nova";
+  src: url(../font/regular.ttf) format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+          //"Homizio Nova", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: $dark-grey;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+label{
+  display: none;
+}
+
+.container {
+  max-width: 1178px;
+  width: 80%;
+}
+
+.btn {
+  background-color: $pink;
+  color: #fff;
+}
+
+h2 {
+  font-size: 3em;
+  span {
+    color: $pink;
+  }
+}
+
+p {
+  padding-top: 59px;
+  font-size: 1.08em;
+  line-height: 1.85em;
+  letter-spacing: 0.75px;
+  padding-bottom: 45px;
+}
+
+a {
+  color: $pink;
+}
+
+article {
+  text-align: left;
+}
+
+header {
+  background: #fff url("../img/header_bg.png") no-repeat scroll center;
+  background-size: cover;
+  width: 100%;
+  height: 990px;
+
+  h1{
+    display: none;
+  }
+
+}
+
+#clients {
+  img {
+    margin: 0 30px;
+  }
+}
+
+#what {
+  padding: 200px 0;
+}
+
+#about {
+  background: $light-grey;
+  padding: 113px 0 270px;
+  .left {
+    text-align: left;
+    padding-top: 6px;
+    margin-left: -15px;
+    padding-bottom: 22px;
+    padding-right: 580px;
+  }
+
+  img {
+    margin-top: 19px;
+    margin-left: -10px;
+    max-width: 575px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn {
+    margin-left: -15px;
+    margin-top: 18px;
+    width: 228px;
+    height: 77px;
+    border-radius: 0;
+    font-size: 1.36em;
+    letter-spacing: 0.75px;
+  }
+}
+
+#services {
+  padding: 85px 0 51px;
+
+  .row {
+    padding-bottom: 50px;
+  }
+
+  .col-lg:nth-of-type(2) {
+    padding: 0 36px;
+  }
+
+  article {
+    // text-align: left;
+    padding-top: 10px;
+    h3 {
+      font-size: 1.29em;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.35em;
+      padding: 10px;
+    }
+
+    .sm-diamond, .sm-diamond-selected {
+      margin: 14px 40px 24px 0;
+    }
+
+  }
+}
+
+#methods {
+  background: $dark-grey url("../img/methods_bg.png") no-repeat scroll center;
+  background-size: cover;
+  width: 100%;
+  padding: 0 0 350px;
+
+  img {
+    margin-top: 126px;
+    margin-left: -123px;
+    margin-right: -8px;
+    max-width: 731px;
+    width: 100%;
+    height: 100%;
+  }
+  article:nth-of-type(1) {
+    padding-top: 177px;
+  }
+
+  article {
+    color: #fff;
+    // text-align: left;
+    padding-top: 40px;
+    h3 {
+      font-size: 1.29em;
+    }
+
+    p {
+      font-size: 0.9em;
+      line-height: 1.35em;
+      padding: 10px;
+    }
+
+    .sm-diamond, .sm-diamond-selected {
+      margin: 14px 40px 24px 0;
+    }
+
+    .sm-diamond i, .sm-diamond-selected i {
+      color: #fff;
+    }
+
+  }
+}
+
+#team {
+  padding-top: 100px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 10;
+
+  .row {
+    padding-top: 110px;
+  }
+
+  img {
+    margin-bottom: -25px;
+
+  }
+
+  a {
+    font-weight: bold;
+  }
+}
+
+#blog {
+  background: $light-grey;
+  padding: 145px 0 77px;
+
+  h2 {
+    padding-bottom: 5px;
+  }
+
+  article {
+    background: #fff;
+    max-width: 375px;
+    padding: 0 20px 26px;
+    border-bottom: 4px solid #fff;
+
+    img {
+      margin: 0 -20px;
+    }
+
+    h3 {
+      padding: 20px 0 0 2px;
+      font-size: 1.23em;
+    }
+
+    p {
+      font-size: 0.8em;
+      line-height: 1.55em;
+      padding: 21px 2px 7px 2px;
+    }
+
+    i {
+      color: $pink;
+      font-size: 1.7em;
+      padding-right: 10px;
+    }
+
+    span {
+      font-size: 0.6em;
+      letter-spacing: 0.75px;
+      padding-left: 2px;
+      padding-right: 45px;
+    }
+  }
+
+  .btn {
+    margin-left: 0px;
+    margin-top: 18px;
+    width: 228px;
+    height: 77px;
+    border-radius: 0;
+    font-size: 1.36em;
+    letter-spacing: 0.75px;
+    padding-left: 20px;
+  }
+
+  .row {
+    padding-top: 77px;
+    padding-bottom: 75px;
+  }
+
+  .col-lg {
+    padding: 0;
+  }
+
+  .col-lg:nth-of-type(2) {
+    margin: 0 24px;
+  }
+
+}
+
+#skills {
+  padding: 100px 0;
+
+  h2 {
+    padding-bottom: 116px;
+  }
+
+  .row {
+    margin-left: -28px;
+  }
+
+  .col:nth-of-type(5) {
+    margin-left: -4px;
+    margin-right: -50px;
+  }
+
+  p {
+    padding: 0;
+  }
+}
+
+#projects {
+  padding: 145px 0 192px;
+
+  h2 {
+    padding-bottom: 110px;
+  }
+
+  img {
+    max-width: 1090px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#specials {
+  padding: 100px 0 192px;
+  background: $light-grey;
+
+  h2 {
+    padding-bottom: 94px;
+  }
+
+  article {
+    background: #fff;
+    padding: 35px 0 0;
+    text-align: center;
+
+    h3 {
+      padding-bottom: 18px;
+    }
+
+    .price {
+      font-size: 2.5em;
+
+    }
+
+  }
+
+  .btn {
+    margin-left: -9px;
+    width: 228px;
+    height: 77px;
+    border-radius: 0;
+    font-size: 1.36em;
+    letter-spacing: 0.75px;
+    background-color: $dark-grey;
+    z-index: 10;
+  }
+
+  article#promoted {
+    h3 {
+      color: $pink;
+    }
+    .price {
+      color: $pink
+    }
+    .btn {
+      background-color: $pink;
+    }
+  }
+
+  ul {
+    padding: 22px 40px 55px;
+    width: 100%;
+    margin: 0 0 0 -7px;
+
+    li {
+      list-style: none;
+      border-bottom: 1px solid #777777;
+      width: 100%;
+      padding: 5px 0;
+    }
+  }
+
+  article {
+    text-align: center;
+
+    #promoted {
+      h3, .price {
+        color: $pink;
+      }
+    }
+  }
+}
+
+#newsletter {
+  background: $dark-grey url("../img/newsletter_bg.png") no-repeat scroll center;
+  background-size: cover;
+  width: 100%;
+  padding: 120px 0 161px;
+  color: #fff;
+
+  input {
+    opacity: 0.2;
+    font-style: italic;
+    text-align: center;
+    width: 85%;
+    height: 100px;
+    margin: 44px 0;
+  }
+
+  .btn {
+    margin-top: 46px;
+    margin-left: -9px;
+    width: 228px;
+    height: 77px;
+    border-radius: 0;
+    font-size: 1.36em;
+    letter-spacing: 0.75px;
+  }
+}
+
+#contact {
+  padding: 90px;
+  h2 {
+    margin-bottom: -23px;
+  }
+
+  form {
+    margin-top: 92px;
+
+    input[type=text] {
+      display: block;
+      width: 100%;
+      background: #eeeeee;
+      height: 89px;
+      border: 0;
+      margin: 0 0 50px 0;
+      padding: 0 7px;
+      font-size: 1.3em;
+    }
+
+    textarea {
+      float: right;
+      width: 100%;
+      border: 0;
+      background: #eeeeee;
+      padding: 20px;
+      font-size: 1.3em;
+      height: 370px;
+    }
+
+    .btn {
+      margin-top: 40px;
+      width: 228px;
+      height: 80px;
+      border-radius: 0;
+      font-size: 1.36em;
+      letter-spacing: 0.75px;
+    }
+  }
+}
+
+footer {
+  padding: 134px 0;
+
+  span {
+    font-size: 2em;
+    padding: 0 25px;
+  }
+
+  p {
+    font-size: 1.05em;
+    padding: 62px 0;
+  }
+}
+
+.diamond, .diamond-selected {
+  @include diamond-base(175px);
+  border: 3px solid $pink;
+  margin: 50px 76px 50px 50px;
+}
+
+.diamond-selected {
+  background-color: $pink;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.diamond p, .diamond-selected p {
+  @include inner-diamond(165px);
+  color: $pink;
+  font-size: 1em;
+}
+
+.diamond-selected p {
+  color: #fff;
+}
+
+.diamond p span, .diamond-selected p span {
+  display: block;
+  font-size: 2.4em;
+  margin-bottom: 40px;
+}
+
+.sm-diamond {
+  @include diamond-base(70px);
+  border: 4px solid $light-grey;
+}
+
+.sm-diamond-selected {
+  @include diamond-base(70px);
+  border: 4px solid $pink;
+}
+
+.sm-diamond i, .sm-diamond-selected i {
+  @include inner-diamond(70px);
+  line-height: 2em;
+  color: $pink;
+  font-size: 1.4em;
+}
+
+.circle {
+  width: 185px;
+  height: 185px;
+  line-height: 170px;
+  border-radius: 50%;
+  color: #777777;
+  text-align: center;
+  border: 7px solid #e83a93;
+  font-size: 1.8em;;
+}
+
+@media screen and (max-width: 1199px) {
+  header {
+    background-image: none;
+    display: none;
+  }
+
+  #about {
+    .left {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    img {
+      display: none;
+    }
+
+    .btn {
+      margin: 0 auto;
+    }
+  }
+
+  #team {
+    width: 100%;
+  }
+
+  #methods {
+    background-image: none;
+    padding: 0 0 200px;
+
+    img {
+      display: none;
+    }
+  }
+
+  #blog{
+    .col-md-6:nth-of-type(3) {
+      padding-top: 50px;
+    }
+  }
+
+  #skills p{
+      text-align: left;
+      padding-left: 10%
+  }
+
+  #newsletter{
+    background-image: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .col-md-12{
+    padding: 50px 0;
+
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  #blog{
+    article{
+      width: 100%;
+    }
+    img{
+      display: none;
+    }
+  }
+
+}

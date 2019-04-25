@@ -1,241 +1,432 @@
-<html> 
-<head> 
-<title>Maria Lee's Design Portfolio</title>
+<!-- TOTAL TIME: 18.5hr -->
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114667206-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	  gtag('config', 'UA-114667206-1');
-	</script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> 
-<script type="text/javascript"> 
-$(document).ready(function(){
-	
-	$(".toggle_container").hide();
- 
-	$("h2.trigger").click(function(){
-		$(this).toggleClass("active").next().slideToggle("slow");
-	});
- 
-});
-</script> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+          integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
-<script src="/jquery/jquery.min.js"></script> 
-<script src="/jquery/jquery.pageslide-0.2.js"></script> 
-
-<script type="text/javascript"> 
-$(document).ready(function() {
-  $('a.help').pageSlide({
-      width: "400px",
-      duration: "fast",
-	  direction: "right"
-  });
-  $('a.help-long').pageSlide({
-      width: "600px"
-  });
-  $('a.help-full').pageSlide({
-      width: "100%",
-      duration: 1000
-  });
-});
-</script>
- 
-<link href="style.css" rel="stylesheet" type="text/css" /> 
-
-</head> 
- 
+    <title>Maria Lee</title>
+</head>
 <body>
-<p>To see full portfolio click <!--<a href="portfolio.html">here</a>, or see a --><a href="#examples">here</a></p>
-<p></p>
-<h3>&nbsp;Maria Lee</h3>
-<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
-</table>
+<div id="wrapper">
+    <header>
+        <h1>BrandaLOKA.</h1>
+        <!-- HERO & NAV -->
+    </header>
 
-<!--- Experience --->
-<h1>&nbsp;Experience</h1> 
-<p>See examples of my design work <a href="#examples">here</a>.</p>
-<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+    <main>
+        <!-- WHAT WE DO -->
+        <section id="what">
+            <div class="container">
+                <h2>What <span>we</span> do</h2>
+                <p>Sed ut <a href="#">perspiciatis unde omnis</a> iste natus error sit voluptatem accusantium doloremque
+                    totam rem aperiam, eaque ipsa
+                    quae ab illo <a href="#">inventore veritatis</a> et quasi architecto beat dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia.<br>
+                    sit amet turpis ut purus <a href="#">pellentesque</a> ullamcorper sed ut nisl.</p>
 
-<tr>
-<td class="colA"><br><b>Camis USA, Inc</b></td>
-<td class="colB">Ann Arbor, MI</td>
-</tr>
-<tr>
-<td class="colA"><i>Field Coordinator</i></td>
-<td class="colB">Nov 2015 &ndash; Mar 2018</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-<li>Created documentation, conducted training, and acted as an escalation point on anything pertaining to implementation and troubleshooting of hardware and networks</li>
-<li>Coordinated, trained, and managed 20 field technicians for twice yearly visits to over 300 client locations to verify wellness of hardware and networks</li>
-<li>Created and maintained projects for client specific issue tracking and asset management as a JIRA administrator</li>
-<li>Created implementation plans for 4 clients in 2017-2018 and oversaw the progress of the project through weekly meetings with internal departments and the client</li>
-<li>Prepared and met budgets by establishing and maintaining relationships with vendors and negotiating competitive prices and issuing purchase orders and invoices</li>
-	</ul>
-</div>
-</td>
-</tr>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="diamond"><p><span>863</span>Projects work</p></div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="diamond-selected"><p><span>921</span>Facebook likes</p></div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="diamond"><p><span>572</span>Tutorials create</p></div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="diamond last"><p><span>159</span>Coffees made</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<tr>
-<td class="colA"><br><b>Camis USA, Inc</b></td>
-<td class="colB">Ann Arbor, MI</td>
-</tr>
-<tr>
-<td class="colA"><i>Tier 2 Help Desk Technician</i></td>
-<td class="colB">Sept 2013 &ndash; Nov 2015</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-	<li>Provided technical and procedural support to 19 clients across the US and Canada</li>
-<li>Discovered and documented bugs and conducted preliminary QA analysis in UAT and QA builds to provide developers with accurate root cause suggestions for issues</li>
-<li>Documented any reported and self-found issues in JIRA and took ownership of the issue by determining priority and escalation and informing customers of resolution</li>
+        <!-- ABOUT US -->
+        <section id="about">
+            <div class="container">
+                <h2>About <span>us</span></h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit <a href="#">voluptatem accusantium</a> doloremque
+                    totam rem aperiam, eaque ipsa
+                    <a href="#">quae ab illo</a> inventore veritatis et quasi architecto beat dicta sunt explicabo.</p>
 
-</ul>
-</div>
-</td>
-</tr>
+                <img src="img/about.png" width="575" height="424" alt="History City Landscape"
+                     class="float-lg-right .float-md-none">
 
-</table>
+                <p class="left .float-sm-none .float-md-none">Suspendisse consequat nisl et consectetur hendrerit. Cras
+                    sit
+                    amet turpis ut purus <a href="#">pellentesque ullamcorper</a> sed ut nisl. In
+                    sed vulputate libero. Nullam nec auctor elit, vitae mattis. </p>
+                <p class="left .float-sm-none .float-md-none">commodo. Suspendisse tincidunt orci ultrices, viverra
+                    mauris
+                    a, tristique mauris. <a href="#">Curabitur pretium</a> pellentesque risus, in
+                    adipiscing tortor consequat id.</p>
 
-<!-- Skills -->
-<h1>&nbsp;Skills</h1>
-<table style="font-family: arial; color: #000000; font-size: 12px;" width="60%">
+                <button class="btn float-lg-left float-md-none">Learn more</button>
+            </div>
+        </section>
 
-<tr>
-<td valign="top"><b>Computer</b></td>
-<td>
-Languages: C++, PHP, Phython, Java<br>
-Software: Microsoft Office Suite, Adobe Photoshop, JIRA<br>
-Web: HTML, CSS, MySQL
-</td>
-</tr>
+        <!-- SERVICES -->
+        <section id="services">
+            <div class="container">
+                <h2>Ser<span>vic</span>es</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit <a href="#">voluptatem accusantium.</a></p>
 
-<!--- Activities --->
-<h1>&nbsp;Activities</h1>
-<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+                <div class="row">
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond float-left"><i class="fas fa-chart-line"></i></div>
 
-<tr>
-<td class="colA"><b>Solar Car Team</b></td>
-<td class="colB">Fall 2008&mdash;Winter 2011</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-<li>Events Coordinator, Winter 2009</li>
-</ul>
-</div>
-</td>
-</tr>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
 
-<tr>
-<td class="colA"><b>Taiwan Students Association</b></td>
-<td class="colB">Fall 2008&mdash;Winter 2011</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-<li>External Public Relations, Fall 2009&mdash;Fall 2010</li>
-<li><a href="http://umich.edu/~taiwan" target="_blank">Webmaster</a>, Winter 2009&mdash;present</li>
-</ul>
-</div>
-</td>
-</tr>
+                    </div>
 
-<tr>
-<td class="colA"><b>alpha Kappa Delta Phi, Sorority Inc.</b></td>
-<td class="colB">Winter 2009&mdash;Fall 2013</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-<li>Vice President New Member Education, Fall 2013</li>
-<li>Vice President External Affairs, Fall 2010&mdash;Winter 2011</li>
-<li>Publicity Chair, Fall 2010&mdash;Winter 2011</li>
-<li>Webmaster, Fall 2010&mdash;present</li>
-</ul>
-</div>
-</td>
-</tr>
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond float-left"><i class="fas fa-cloud"></i></div>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
+                    </div>
 
-<tr>
-<td><b>Asian/Pacific Islander-American (APIA) Heritage Month</b></td>
-<td>Winter 2011</td>
-</tr>
-<tr>
-<td colspan="2">
-<div class="tab">
-<ul>
-<li>Co&ndash;president, Winter 2011</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond float-left"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
 
-<!---Education --->
-<h1>&nbsp;Education</h1>
-<table style="font-family: arial; color: #000000; font-size: 12px;" width="75%">
+                    </div>
+                </div>
 
-<tr>
-<td class="colA"><b>University of Michigan &mdash; Ann Arbor</b></td>
-<td class="colB">Ann Arbor, MI</td>
-</tr>
-<tr>
-<td class="colA"><i>Major in Computer Engineering</i></td>
-<td class="colB">September 2008 &ndash; May 2012</td>
-</tr>
-</table>
+                <div class="row">
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond-selected float-left"><i class="fas fa-bell"></i></div>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
+                    </div>
 
-<h1>&nbsp;Awards</h1>
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond float-left"><i class="fas fa-eye"></i></div>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
+                    </div>
 
-<a name="examples"><h1>&nbsp;Examples</h1></a>
-<div class="container">
-<h2 class="trigger">Web</h2>
-<div class="toggle_container">
-	<div class="block">
-		<h3>Web Work</h3>
-		<!--Content-->
-		<p>All of these websites were conceptualized and coded by me.  Also, all the graphics for the layout were made by me.  I used HTML and CSS hardcoding for all of these websites, but I am also knowledgeable with Dreamweaver and iWeb.<br>
-		<div class="content">
-		 <a class="help" href="akdfquick.html"><img src="thumbnails/akdphi.jpg"></a>
-		 <a class="help" href="taiwanquick.html"><img src="thumbnails/taiwan.jpg"></a>
-		 </div>
-		</p>
-	</div>
-</div>
+                    <div class="col-lg col-12">
+                        <article class="service-section">
+                            <div class="sm-diamond float-left"><i class="fas fa-code"></i></div>
+                            <h3>Adipiscing tortor</h3>
+                            <p>Morbi condimentum leo sed
+                                sollicitudin pulvinar. Phasellus
+                                rutrum interdum elit quis.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<h2 class="trigger">Print</h2>
-<div class="toggle_container">
-	<div class="block">
-		<h3>Print Work</h3>
-		<!--Content-->
-		<p>All of these graphics were conceptualized and designed by myself.  I used Adobe Photoshop for most of them.  I am also knowledgable in Adobe Illustrator.<br>
-		<div class="content">
-		 <a class="help" href="fusionquick.html"><img src="thumbnails/fusion.jpg"></a>
-		 <a class="help" href="alteregoquick.html"><img src="thumbnails/alterego.jpg"></a>
-		 <a class="help" href="winterwonderlandquick.html"><img src="thumbnails/winterwonderland.jpg"></a>
-		 <a class="help" href="thinkpinkquick.html"><img src="thumbnails/thinkpink.jpg"></a>
-		 <a class="help" href="tpticketquick.html"><img src="thumbnails/tpticket.jpg"></a>
-		 <a class="help" href="coasttocoastquick.html"><img src="thumbnails/coasttocoast.jpg"></a>
-		 </div>
-		</p>
-	</div>
-</div>
 
-</div>
-</div>
- 
-</body> 
- 
+        <!-- METHODS -->
+        <div id="methods">
+            <div class="container">
+                <img src="img/devices.png" width="731" height="620" alt="iPhone and iPad mockup"
+                     class="float-lg-left float-md-none">
+                <div id="methods-collection">
+                    <article class="methods-section">
+                        <div class="sm-diamond float-left"><i class="fas fa-code"></i></div>
+                        <h3>Adipiscing tortor</h3>
+                        <p>Morbi condimentum leo sed sollicitudin pulvinar.
+                            Phasellus rutrum interdum elit quis.</p>
+                    </article>
+
+                    <article class="methods-section">
+                        <div class="sm-diamond float-left"><i class="fas fa-code"></i></div>
+                        <h3>Adipiscing tortor</h3>
+                        <p>Morbi condimentum leo sed sollicitudin pulvinar.
+                            Phasellus rutrum interdum elit quis.</p>
+                    </article>
+
+                    <article class="methods-section">
+                        <div class="sm-diamond float-left"><i class="fas fa-code"></i></div>
+                        <h3>Adipiscing tortor</h3>
+                        <p>Morbi condimentum leo sed sollicitudin pulvinar.
+                            Phasellus rutrum interdum elit quis.</p>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CLIENTS CARASEL -->
+        <div id="clients">
+            <!--   <div class="carousel-diamond"><i class="fas fa-chevron-left"></i></div> -->
+            <img src="img/audiojungle.png" width="230" height="47" alt="audiojungle logo">
+            <img src="img/3docean.png" width="230" height="38" alt="3docean logo">
+            <img src="img/themeforest.png" width="230" height="43" alt="themeforest logo">
+            <img src="img/graphicriver.png" width="230" height="67" alt="graphicriver logo">
+            <!--  <div class="carousel-diamond"><i class="fas fa-chevron-right"></i></div> -->
+        </div>
+
+
+        <!-- OUR TEAM
+        <section id="team">
+
+            <h2>Our <span>team</span></h2>
+
+            <div class="row no-gutters">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12"><img src="img/emp1.png" width="281" height="279" alt="CEO/Founder">
+                    <p><a href="#">CEO/ Founder</a></p></div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12"><img src="img/emp2.png" width="292" height="277" alt="Manager">
+                    <p><a href="#">Manager</a></p></div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12"><img src="img/emp3.png" width="305" height="282" alt="Web developer">
+                    <p><a href="#">Web developer</a></p></div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12"><img src="img/emp4.png" width="275" height="277" alt="Web designer">
+                    <p><a href="#">Web designer</a></p></div>
+            </div>
+
+        </section> -->
+
+        <!-- LATEST POST -->
+        <section id="blog">
+            <div class="container">
+                <h2>Latest <span>posts</span></h2>
+
+                <div class="row">
+                    <div class="col-lg col-md-6 col-sm-12">
+                        <article>
+                            <img src="img/blog1.png" width="376" height="262" alt="Snowy Railroad">
+                            <h3>Aliquam metus neque</h3>
+                            <p>bibendum sit amet porta at, consequat et
+                                enim. In ut turpis non ipsum rhoncus porttitor
+                                vel ac nunc. Maecenas interdum dignissim
+                                lorem quis auctor sit amet nulla nisl, aliquam
+                                pretium ipsum.</p>
+                            <span class="date"><i class="far fa-clock"></i>September 02</span>
+                            <span class="comment-count"><i class="fas fa-comment"></i>19</span>
+                        </article>
+                    </div>
+
+                    <div class="col-lg col-md-6 col-sm-12 selected-article">
+                        <article>
+                            <img src="img/blog2.png" width="375" height="262" alt="Cattle">
+                            <h3>Aliquam metus neque</h3>
+                            <p>bibendum sit amet porta at, consequat et
+                                enim. In ut turpis non ipsum rhoncus porttitor
+                                vel ac nunc. Maecenas interdum dignissim
+                                lorem quis auctor sit amet nulla nisl, aliquam
+                                pretium ipsum.</p>
+                            <span class="date"><i class="far fa-clock"></i>September 02</span>
+                            <span class="comment-count"><i class="fas fa-comment"></i>19</span>
+                        </article>
+                    </div>
+
+                    <div class="col-lg col-md-6 col-sm-12">
+                        <article>
+                            <img src="img/blog3.png" width="375" height="263" alt="Laptop">
+                            <h3>Aliquam metus neque</h3>
+                            <p>bibendum sit amet porta at, consequat et
+                                enim. In ut turpis non ipsum rhoncus porttitor
+                                vel ac nunc. Maecenas interdum dignissim
+                                lorem quis auctor sit amet nulla nisl, aliquam
+                                pretium ipsum.</p>
+                            <span class="date"><i class="far fa-clock"></i>September 02</span>
+                            <span class="comment-count"><i class="fas fa-comment"></i>19</span>
+                        </article>
+                    </div>
+                </div>
+
+                <button class="btn">More posts</button>
+            </div>
+        </section>
+
+        <!-- OUR SKILLS -->
+        <section id="skills">
+            <div class="container">
+                <h2>Our <span>skills</span></h2>
+                <div class="row">
+                    <div class="col-lg col-md-4">
+                        <div class="circle">85%</div>
+                        <p>Web design</p>
+                    </div>
+                    <div class="col-lg col-md-4">
+                        <div class="circle">65%</div>
+                        <p>Branding design</p>
+                    </div>
+                    <div class="col-lg col-md-4">
+                        <div class="circle">80%</div>
+                        <p>Time management</p>
+                    </div>
+                    <div class="col-lg col-md-6">
+                        <div class="circle">65%</div>
+                        <p>Creative Cloud</p>
+                    </div>
+                    <div class="col-lg col-md-6">
+                        <div class="circle">85%</div>
+                        <p>Web development</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR LATEST PROJECT -->
+        <section id="projects">
+            <h2>Our <span>latest</span> project</h2>
+            <img src="img/projects_thumbs.png" width="1090" height="554" alt="Project Thumbnails">
+
+            <!--     <div class="row">
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                 </div>
+
+
+                 <div class="row">
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                     <div class="col"></div>
+                 </div>
+                 -->
+
+        </section>
+
+        <!-- SPECIAL OFFERS -->
+        <section id="specials">
+            <div class="container">
+                <h2>Special <span>offers</span></h2>
+
+                <div class="row">
+                    <div class="col-lg col-md-12">
+                        <article class="offer">
+                            <h3>Standart</h3>
+                            <span class="price">$39.99</span>
+                            <ul>
+                                <li>Duis mi dolor, fermentum</li>
+                                <li>scelerisque mattis sit amet,</li>
+                                <li>condimentum sit amet nunc.</li>
+                                <li>Cras eros felis</li>
+                                <li>tristique sed sagittis id</li>
+                            </ul>
+                            <button class="btn">Take a plan</button>
+                        </article>
+                    </div>
+
+                    <div class="col-lg col-md-12">
+                        <article class="offer" id="promoted">
+                            <h3>The Best</h3>
+                            <span class="price">$59.99</span>
+                            <ul>
+                                <li>Duis mi dolor, fermentum</li>
+                                <li>scelerisque mattis sit amet,</li>
+                                <li>condimentum sit amet nunc.</li>
+                                <li>Cras eros felis</li>
+                                <li>tristique sed sagittis id</li>
+                            </ul>
+                            <button class="btn">Take a plan</button>
+                        </article>
+                    </div>
+
+                    <div class="col-lg col-md-12">
+                        <article class="offer">
+                            <h3>Premium</h3>
+                            <span class="price">$89.99</span>
+                            <ul>
+                                <li>Duis mi dolor, fermentum</li>
+                                <li>scelerisque mattis sit amet,</li>
+                                <li>condimentum sit amet nunc.</li>
+                                <li>Cras eros felis</li>
+                                <li>tristique sed sagittis id</li>
+                            </ul>
+                            <button class="btn">Take a plan</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section id="newsletter">
+            <div class="container">
+                <h2>Subscribe <span>our</span> newsletter</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit <a href="#">voluptatem accusantium</a>.</p>
+                <form action="newsletter.html">
+                    <label for="newsletter-signup-email">Enter your email address</label>
+                    <input type="text" id="newsletter-signup-email" placeholder="enter your email address"><br>
+                    <button class="btn" id="submit-newsletter">Subscribe now</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h2>Get in <span>touch</span></h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit <a href="#">voluptatem accusantium</a>.</p>
+                <form action="contact.html">
+                    <div class="row">
+                        <div class="col-lg col-md-12">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Email" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
+
+                        <div class="col-lg col-md-12">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+
+                    <button class="btn" id="submit-contact">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <!-- facebook, twitter, basketball -->
+        <span id="facebook" class="social"><i class="fab fa-facebook-f"></i></span>
+        <span id="twitter" class="social"><i class="fab fa-twitter"></i></span>
+        <span id="basketball" class="social"><i class="fab fa-dribbble"></i></span>
+        <p>Copyright 2014 &copy; andreyyann, All right reserved.</p>
+    </footer>
+
+
+</div> <!-- END WRAPPER -->
+</body>
 </html>
